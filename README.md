@@ -17,16 +17,16 @@ static void Main(string[] args)
             for (int i = 0; i < test.Count-1; i++)
             {
 
-                if (test[i]<test[i+1])
+                if (i!=0 &&(test[i]<test[i+1] || i + 2 >= test.Count ))
                 {
                     Console.WriteLine(test[i + 1]);
                 }
-
-
-                if (i+2>=test.Count)
+                else if (i==0 && test[i] < test[i + 1])
                 {
-                    Console.WriteLine(test[i+1]);
+                    Console.WriteLine(test[i]);
                 }
+
+
 
                 
 
